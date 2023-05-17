@@ -1,0 +1,9 @@
+USE [RAW]
+GO
+
+IF NOT EXISTS ( SELECT 1 FROM sys.schemas WITH(NOLOCK) WHERE name = 'Carnival' )
+BEGIN
+	PRINT 'CREATE SCHEMA RAW Carnival'
+	EXEC('CREATE SCHEMA Carnival')
+END
+
